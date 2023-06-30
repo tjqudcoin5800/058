@@ -1,0 +1,17 @@
+import java.awt.Desktop;
+import java.net.URI;
+
+public class Main {
+    public static void main(String[] args) {
+        String coinName = "Bitcoin";
+        Desktop desktop = java.awt.Desktop.getDesktop();
+        String url = "https://www.google.com/search?q=" + coinName;
+
+        try {
+            URI uri = new URI(url);
+            desktop.browse(uri);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
